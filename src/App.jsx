@@ -81,7 +81,7 @@ export default function App() {
               <a
                 href={`https://twitter.com/intent/tweet?text=${quote.text} -${quote.author}`}
                 id="tweet-quote"
-                target="_top"
+                target="_blank"
               >
                 TWEET QUOTE
               </a>
