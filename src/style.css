@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Inter:wght@100;300;400;500;700;800;900&display=swap');
+:root{
+    --pink : #F7567C;
+    --navy-blue: #99E1D9;
+    --milky-brown: #B49A67;
+    --dark: #343F3E;
+
+}
+*,::after,::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* CONTAINER */
+.container{
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    transition: all .4s;
+}
+#quote-box{
+    height: auto;
+    max-width: 650px;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* TOOGLE SWITCH */
+.toggler{
+  position : fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  width: min-content;
+  height: 100px;
+  font-family: 'Cormorant SC', serif;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid var(--milky-brown);
+}
+.toggler p{
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+.toggler--slider {
+    width: 45px;
+    height: 23px;
+    background-color: white;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+    padding: 1px;
+}
+main.light .toggler--slider{
+    background-color: black;
+    justify-content: flex-end;
+    border: 1px solid white;
+}
+.toggler--slider--circle{
+    height: 23px;
+    width: 23px;
+    background-color: black;
+    border-radius: 50%;
+    transition: all .9s
+}
+main.light .toggler--slider--circle{
+    background-color: white;
+}
+
+/* CONTENTS */
+#text{
+    font-family: 'Inter',sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .1rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+}
+#author{
+    color: var(--navy-blue);
+    text-align:end;
+    font-family: 'Cormorant SC', serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+/* BUTTONS */
+#btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    padding: 10px;
+    width: 15rem;
+    border-radius: 30px;
+    font-family: 'Inter',sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease-out;
+}
+#new-quote-btn{
+    color:rgb(67, 65, 65);
+    
+}
+@media (max-width: 400px){
+    .btn{
+        width: 7rem;
+        padding: 5px;
+        font-size: .8rem;
+    }
+    #text{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #author{
+        font-size: 1rem;
+        /* margin-bottom: 1rem; */
+    }
+    .toggler--slider {
+    width: 39px;
+    height: 21px;
+    padding: 1.8px;
+}
+    .toggler p{
+   font-size: 1rem;
+}
+    .toggler{
+        padding: 10px;
+        height: 70px;
+    }
+}
+#new-quote-btn:hover{
+    background-color: var(--milky-brown);
+    color:whitesmoke
+}
+#tweet-quote{
+  background-color: rgb(82, 82, 219);
+  text-decoration: none;
+  color: white;
+}
+#tweet-quote:hover{
+    background-color: rgb(20, 20, 223);
+}
+#tweet-quote-btn{
+    background-color: rgb(82, 82, 219);
+}
+#tweet-quote-btn:hover{
+    background-color: rgb(20, 20, 223);
+}
+a{
+    background-color: rgb(20, 20, 223);
+}
+
+
+
+
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 2000ms;
+}
