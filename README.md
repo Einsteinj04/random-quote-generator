@@ -1,4 +1,4 @@
-#random quote generator machine
+RANDOM QUOTE GENERATOR MACHINE
 
 This project was built with [vite](https://vitejs.dev/).
 This is one of the required projects from <mark>Freecodecamp</mark>.
